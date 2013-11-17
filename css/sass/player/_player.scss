@@ -1,0 +1,40 @@
+$selectedColor: green;
+
+.container{
+  color: #ffffff;
+  margin: 50px auto;
+  width: 50%;
+  background: #000000;
+  min-height: 300px;
+  audio{
+    width: 100%;
+    height: 33px;
+  }
+  .playlistContainer{
+    padding: 10px;
+    .grid{
+      min-height: 250px;
+      table{
+        width: 100%;
+        tr.selected{
+          background: $selectedColor;
+          td{
+            border-right: $selectedColor;
+          }
+        }
+        td{
+          cursor: pointer;
+          button{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    button {
+      float: right;
+    }
+    .clearBoth {
+      clear: both;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.container {
+  color: #ffffff;
+  margin: 50px auto;
+  width: 50%;
+  background: #000000;
+  min-height: 300px; }
+  .container audio {
+    width: 100%;
+    height: 33px; }
+  .container .playlistContainer {
+    padding: 10px; }
+    .container .playlistContainer .grid {
+      min-height: 250px; }
+      .container .playlistContainer .grid table {
+        width: 100%; }
+        .container .playlistContainer .grid table tr.selected {
+          background: green; }
+          .container .playlistContainer .grid table tr.selected td {
+            border-right: green; }
+        .container .playlistContainer .grid table td {
+          cursor: pointer; }
+          .container .playlistContainer .grid table td button {
+            cursor: pointer; }
+    .container .playlistContainer button {
+      float: right; }
+    .container .playlistContainer .clearBoth {
+      clear: both; }
