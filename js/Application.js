@@ -2,6 +2,7 @@ N13.define('App.Application', {
     extend   : 'App.base.App',
     requires : [
         'App.controller.player.Player',
+        // We don't need a Config here!
         'App.Config'
     ],
     init     : function() {
