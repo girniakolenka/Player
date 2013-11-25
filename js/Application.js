@@ -12,8 +12,8 @@ N13.define('App.Application', {
     },
 
     run      : function() {
-        // db: it's better to describe here the autoRun config set to true for this controller
-        // db: it's hard to understand that from the code
+        // db: it's better to describe here the autoRun config set to true for this controller.
+        // db: it's hard to understand that from the code.
         N13.create('App.controller.player.Player');
     }
 })
