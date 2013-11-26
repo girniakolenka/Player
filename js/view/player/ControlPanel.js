@@ -11,6 +11,7 @@ N13.define('App.view.player.ControlPanel', {
     },
     onAfterInit   : function(){
         this.callParent(arguments);
+        // db: should be in onBeforeRender() method
         this.setConfig({
             data: {
                 track   : this.track || App.Config.player.defaultTrack,
@@ -20,12 +21,17 @@ N13.define('App.view.player.ControlPanel', {
     },
 
     onAfterRender: function(){
+        // db: this kind of annotations is used for describing of fields, methods, properties and so on. But not for
+        // db: custom comments. Use // or /*...*/ instead
         /**
          * hang event here because backbone can't support events with audio
          * events : {
          *  'ended audio' : 'some_handler'
          * }
          */
+        // db: what about unsubscribe from this event?
+        // db: it will be added for every render() call
+        // db: you should use listen() method for this
         this.el.find('audio').on('ended', this._ended.bind(this));
 
         this.callParent(arguments);

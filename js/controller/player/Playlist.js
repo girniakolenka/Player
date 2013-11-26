@@ -31,8 +31,10 @@ N13.define('App.controller.player.Playlist', {
         this._addButton.on('clicked', this._add.bind(this));
         this._collection.fetch({
             success: function(collection, response, options){
+                // db this code should be inside the grid, not here, because
+                // db: this logic is related only to the grid
                 me._playlistGrid.setConfig({
-                    data:{
+                    data:{ // db: need space after ':'
                         tracks   : response.items
                     }
                 });

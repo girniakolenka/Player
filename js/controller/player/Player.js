@@ -1,3 +1,4 @@
+// db: general comment: no comments for fields, public methods, properties and so on...
 N13.define('App.controller.player.Player', {
     extend  : 'App.controller.base.Controller',
     mixins  : {
@@ -14,9 +15,10 @@ N13.define('App.controller.player.Player', {
         controllers: ['player.Playlist']
     },
 
-    initPrivates: function(){
+    initPrivates: function(){ // db: we use one space after() according to our notation
         this.callParent(arguments);
 
+        // db: these fields should be described with JSDoc
         this._controlPanel = null;
         this._playlistGrid = null;
     },
@@ -37,7 +39,12 @@ N13.define('App.controller.player.Player', {
         this.runControllers();
     },
 
+    // db: You should use _onDoXXX() notation for handlers
+    // db: name _play() doesn't contains the meaning of this method,
+    // db: so, it's hard to understand it's purpose without code investigation
     _play: function(track){
+        // db: control panel should contain internal reference to the tracks collection.
+        // db: if so, we don't need to set it every time before rendering
         this._controlPanel.setConfig({
             data:{
                 track   : track,
